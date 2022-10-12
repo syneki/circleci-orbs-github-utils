@@ -17,7 +17,8 @@ jobs:
       - checkout
       # Run your orb's commands to validate them.
       - github-utils/setup
-      - github-utils/comment-pr
+      - github-utils/comment-pr:
+          body: Hello world
 workflows:
   test-deploy:
     jobs:
