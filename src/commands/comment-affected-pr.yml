@@ -12,7 +12,7 @@ parameters:
     description: The body of the comment.
 steps:
   - run:
-      name: Create a comment on PR << parameters.pull_request >>
+      name: Create a comment on PR affected by commit << parameters.commit >>
       command: << include(scripts/comment-pr.sh) >>
       environment:
         PARAM_COMMIT: << parameters.commit >>
