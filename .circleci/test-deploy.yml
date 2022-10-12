@@ -21,7 +21,9 @@ jobs:
       - github-utils/setup
       - github-utils/comment-pr:
           pull_request: SK_FAKE_PR
-          body: This Comment has been created with the `comment-pr` command
+          body: >
+            ## 🎉 Test successfull 
+            This Comment has been created with the `comment-pr` command
 
 workflows:
   test-deploy:
