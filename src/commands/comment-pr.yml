@@ -1,0 +1,17 @@
+description: >
+  Creates a comment on a Pull Request.
+
+parameters:
+  pull_request:
+    type: env_var_name
+    default: CIRCLE_PR_NUMBER
+    description: The environment variable containing the Pull Request number, url or branch.
+  body:
+    type: string
+    description: The body of the comment.
+steps:
+  - run:
+      name: Create a comment on PR << parameters.pull_request >>
+      command: << include(scripts/release.sh) >>
+      environment:
+        PARAM_PR: << parameters.pull_request >>
