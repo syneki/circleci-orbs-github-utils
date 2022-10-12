@@ -1,3 +1,7 @@
 #!/bin/bash
 
-eval "gh pr comment \$${PARAM_PR} -b \"${PARAM_BODY}\""
+IFS=',' read -r -a array <<< "$string"
+for element in "${array[@]}"
+do
+    eval "gh pr comment \"${element}\" -b \"${PARAM_BODY}\""
+done

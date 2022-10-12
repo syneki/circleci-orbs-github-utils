@@ -15,5 +15,7 @@ steps:
       name: Create a comment on PR << parameters.pull_request >>
       command: << include(scripts/comment-pr.sh) >>
       environment:
-        PARAM_PR: << parameters.pull_request >>
-        PARAM_BODY: << parameters.body >>
+        PARAM_COMMIT: << parameters.commit >>
+  - comment-pr:
+      pull_request: SK_PULL_REQUESTS
+      body: << parameters.body >>

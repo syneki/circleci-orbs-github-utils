@@ -6,7 +6,9 @@ parameters:
   pull_request:
     type: env_var_name
     default: CIRCLE_PR_NUMBER
-    description: The environment variable containing the Pull Request number, url or branch.
+    description: >
+      The environment variable containing the Pull Request number, url or branch.
+      You can specify multiple Pull Request separated with a comma.
   body:
     type: string
     description: The body of the comment.
