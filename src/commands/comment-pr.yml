@@ -1,6 +1,6 @@
 description: >
-  Creates a comment on a Pull Request. 
-  It will create by default a comment on the associated Pull Request. 
+  Creates a comment on a Pull Request.
+  It will create by default a comment on the associated Pull Request.
 
 parameters:
   pull_request:
