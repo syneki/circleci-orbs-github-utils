@@ -16,3 +16,4 @@ steps:
       command: << include(scripts/comment-pr.sh) >>
       environment:
         PARAM_PR: << parameters.pull_request >>
+        PARAM_BODY: << paramters.body >>
