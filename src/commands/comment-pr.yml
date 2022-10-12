@@ -1,5 +1,6 @@
 description: >
-  Creates a comment on a Pull Request.
+  Creates a comment on a Pull Request. 
+  It will create by default a comment on the associated Pull Request. 
 
 parameters:
   pull_request:
@@ -12,6 +13,6 @@ parameters:
 steps:
   - run:
       name: Create a comment on PR << parameters.pull_request >>
-      command: << include(scripts/release.sh) >>
+      command: << include(scripts/comment-pr.sh) >>
       environment:
         PARAM_PR: << parameters.pull_request >>
