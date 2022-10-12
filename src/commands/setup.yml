@@ -21,6 +21,6 @@ parameters:
     description: "Specify the full semver versioned tag to use."
 steps:
   - gh/setup:
-      hostname: << paramters.hostname >>
-      token: << paramters.token >>
+      hostname: << parameters.hostname >>
+      token: << parameters.token >>
       version: << parameters.version >>
